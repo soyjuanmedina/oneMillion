@@ -7,16 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'oneMillion';
-  clicks = 1;
+  clicks = 1000000;
 
   onClick() {
     this.clicks--;
     if (this.clicks == 0) {
-      let u = document.getElementById('box');
-      u.classList.remove('bg-box')
-      u.innerHTML = '<h1>You win</h1>';
-      console.log('u', u);
+      this.win();
     }
+  }
+
+  win() {
+    let box = document.getElementById('box');
+    box.classList.remove('bg-box')
+    box.innerHTML = '<div class="winBox">You win</div>';
+    document.body.classList.add('winAnimation')
   }
 
   randomIntFromInterval(min, max) { // min and max included 
