@@ -7,17 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'oneMillion';
-  clicks = 0;
-  message;
-  width = 300;
-  height = 300;
+  clicks = 1;
 
   onClick() {
-    this.clicks++;
-    if (this.clicks > 1) {
-      this.message = "Enhorabuena, ya has superado los 1 clicks"
-      this.width = this.randomIntFromInterval(1, 500);
-      this.height = this.randomIntFromInterval(1, 500);
+    this.clicks--;
+    if (this.clicks == 0) {
+      let u = document.getElementById('box');
+      u.classList.remove('bg-box')
+      u.innerHTML = '<h1>You win</h1>';
+      console.log('u', u);
     }
   }
 

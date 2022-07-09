@@ -4,11 +4,25 @@ body {
   height: 100%;
 }
 
-.box {
+#box {
   text-align: center;
 }
 
 .btn-circle.btn-xl {
-  border-radius: 100px;
+  border-radius: 200px;
+  font-size: 50px;
+  background-color: black;
   text-align: center;
+  height: 400px;
+  width: 400px;
+  border: 10px solid #D5C9C4;
+}
+
+.bg-box {
+  background: repeating-linear-gradient(45deg,
+      rgba(0, 0, 0, 0) 20px,
+      rgba(0, 0, 0, 0) 40px,
+      #031401 40px,
+      #031401 60px);
+  background-color: #0E1D3A;
 }

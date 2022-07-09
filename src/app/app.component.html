@@ -1,9 +1,4 @@
-<div class="box mt-5">
-  <h4>Pulsa un millon de veces</h4>
-  <button type="button" class="btn btn-danger btn-circle btn-xl mt-5" (click)=onClick()
-    [style.width.px]="width" [style.height.px]="height">
-    Click</button>
-  <h4>Pulsaciones</h4>
-  <h2>{{clicks}}</h2>
-  <h2 class="mt-5">{{message}}</h2>
+<div class="bg-box" id="box">
+  <button type="button" class="btn btn-dark btn-circle btn-xl mt-5 mb-5" (click)=onClick()>
+    {{clicks | number }}</button>
 </div>
